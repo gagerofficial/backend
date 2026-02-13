@@ -10,6 +10,14 @@ from datetime import datetime
 # Create the main app without a prefix
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Ez engedélyezi, hogy bármilyen címről (pl. localhost-ról is) elérjék
+    allow_credentials=True,
+    allow_methods=["*"],  # Engedélyezi a GET, POST stb. kéréseket
+    allow_headers=["*"],  # Engedélyezi az összes fejlécet
+)
+
 # Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
 
