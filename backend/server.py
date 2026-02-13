@@ -1,6 +1,7 @@
 from fastapi import FastAPI, APIRouter
 from starlette.middleware.cors import CORSMiddleware
 import os
+import uvicorn
 import logging
 from pydantic import BaseModel, Field
 from typing import List, Optional
@@ -620,5 +621,5 @@ app.include_router(api_router)
 
 # Belépési pont a lokális futtatáshoz
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
