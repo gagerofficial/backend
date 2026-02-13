@@ -602,3 +602,23 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
+
+@api_router.get("/rooms/search")
+async def search_rooms(q: str = ""):
+    if not q:
+        return []
+    results = []
+    q_lower = q.lower()
+    for building in CAMPUS_BUILDINGS:
+        for room in building.rooms:
+            if q_lower in room.name.lower() or (room.description and q_lower in room.description.lower()):
+                results.append(room)
+    return results
+
+# FONTOS: A router regisztrálása az app-hoz
+app.include_router(api_router)
+
+# Belépési pont a lokális futtatáshoz
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
