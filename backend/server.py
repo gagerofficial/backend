@@ -186,10 +186,10 @@ COURSES = [
 ]
 
 STAFF_MEMBERS = [
-    StaffMember(id="1", name="Igazgató", position="Intézményvezető", department="Vezetőség", email="igazgato@pataky.hu"),
-    StaffMember(id="2", name="Informatika Tanszék", position="Oktatási egység", department="Informatika"),
-    StaffMember(id="3", name="Elektronika Tanszék", position="Oktatási egység", department="Elektronika"),
-    StaffMember(id="4", name="Közismereti Tanszék", position="Oktatási egység", department="Közismeret"),
+    StaffMember(id="1", name="Tóth Imre", position="igazgató", department="Vezetőség", email="imre@pataky.hu"),
+    StaffMember(id="2", name="Székelyné Polgár Klára", position="igazgatóhelyettes", department="Vezetőség", email="pklara@pataky.hu"),
+    StaffMember(id="3", name="Harangozó Attila", position="igazgatóhelyettes", department="Vezetőség", email="gyak@pataky.hu"),
+    StaffMember(id="4", name="Végh Orsolya", position="igazgatóhelyettes", department="Vezetőség", email="vegh.orsolya@pataky.hu"),
     StaffMember(id="5", name="Titkárság", position="Adminisztráció", department="Iroda", email="pataky@pataky.hu"),
 ]
 
@@ -205,18 +205,41 @@ class Teacher(BaseModel):
     consultation_hours: Optional[str] = None
 
 TEACHERS = [
-    Teacher(id="1", name="Dr. Kovács Péter", subject="Programozás, Webfejlesztés", department="Informatika", email="kovacs.peter@pataky.hu", office="B épület 201", consultation_hours="Kedd 14:00-16:00"),
-    Teacher(id="2", name="Nagy Éva", subject="Hálózatok, Rendszerüzemeltetés", department="Informatika", email="nagy.eva@pataky.hu", office="B épület 203", consultation_hours="Szerda 13:00-15:00"),
-    Teacher(id="3", name="Szabó János", subject="Elektronika, Áramkörök", department="Elektronika", email="szabo.janos@pataky.hu", office="A épület 105", consultation_hours="Hétfő 14:00-16:00"),
-    Teacher(id="4", name="Tóth Mária", subject="Matematika, Fizika", department="Közismeret", email="toth.maria@pataky.hu", office="C épület 302", consultation_hours="Csütörtök 13:00-15:00"),
-    Teacher(id="5", name="Horváth László", subject="Magyar nyelv és irodalom", department="Közismeret", email="horvath.laszlo@pataky.hu", office="C épület 301", consultation_hours="Péntek 12:00-14:00"),
-    Teacher(id="6", name="Kiss Andrea", subject="Angol nyelv", department="Közismeret", email="kiss.andrea@pataky.hu", office="C épület 305", consultation_hours="Kedd 12:00-14:00"),
-    Teacher(id="7", name="Molnár Gábor", subject="Adatbáziskezelés, SQL", department="Informatika", email="molnar.gabor@pataky.hu", office="B épület 205", consultation_hours="Szerda 14:00-16:00"),
-    Teacher(id="8", name="Varga Katalin", subject="Történelem, Társadalomismeret", department="Közismeret", email="varga.katalin@pataky.hu", office="C épület 303", consultation_hours="Hétfő 13:00-15:00"),
-    Teacher(id="9", name="Fekete Zoltán", subject="Elektrotechnika, Villamos gépek", department="Elektronika", email="fekete.zoltan@pataky.hu", office="A épület 107", consultation_hours="Csütörtök 14:00-16:00"),
-    Teacher(id="10", name="Balogh Eszter", subject="Testnevelés", department="Közismeret", email="balogh.eszter@pataky.hu", office="Tornaterem", consultation_hours="Péntek 10:00-12:00"),
-    Teacher(id="11", name="Papp Béla", subject="Mobil alkalmazásfejlesztés", department="Informatika", email="papp.bela@pataky.hu", office="B épület 207", consultation_hours="Kedd 15:00-17:00"),
-    Teacher(id="12", name="Simon Ágnes", subject="Kémia", department="Közismeret", email="simon.agnes@pataky.hu", office="C épület 104", consultation_hours="Szerda 12:00-14:00"),
+    Teacher(id="T1", name="Czene István", subject="magyar nyelv és irodalom – történelem – állampolgári ismeretek", department="Közismeret", email="istvanczene@gmail.com", office="11.B"),
+    Teacher(id="T2", name="Harsányi Tünde", subject="magyar nyelv és irodalom – történelem – állampolgári ismeretek", department="Közismeret", email="harsanyit@pataky.hu", office="11.D"),
+    Teacher(id="T3", name="Haller Zoltán", subject="magyar nyelv és irodalom – történelem", department="Közismeret", email="haller.zoltan@pataky.hu", office="11.E"),
+    Teacher(id="T4", name="Szalai József", subject="magyar nyelv és irodalom", department="Közismeret", email="szalai.jozsef@pataky.hu", office="9.B"),
+    Teacher(id="T5", name="Tózsa Éva", subject="magyar nyelv és irodalom", department="Közismeret", email="tozsa.eva77@gmail.com", office="11.A"),
+    Teacher(id="T6", name="Csabay Károly", subject="Matematika", department="Közismeret", email="csabay.karoly@pataky.hu"),
+    Teacher(id="T7", name="Hegedűs László", subject="matematika", department="Közismeret", email="hegedus.laszlo@pataky.hu", office="12.C"),
+    Teacher(id="T8", name="Katona Csaba", subject="Fizika", department="Közismeret", email="kacsa@pataky.hu", office="12.C"),
+    Teacher(id="T9", name="Novotny László", subject="matematika", department="Közismeret", email="novotny.laszlo@pataky.hu"),
+    Teacher(id="T10", name="Szabó Márta", subject="matematika, digitális kultúra", department="Közismeret", email="szabo.marta@pataky.hu"),
+    Teacher(id="T11", name="Fekete Tamás", subject="IKT projektmunka, Programozás, Informatikai alapok", department="Informatika", email="fekete.tamas@pataky.hu"),
+    Teacher(id="T12", name="Gersei Gábor", subject="Hálózatok gyakorlat, Informatikai alapok", department="Informatika", email="gersei@pataky.hu"),
+    Teacher(id="T13", name="Gödöny Péter", subject="Informatikai alapok, Programozás, Digitális kultúra", department="Informatika", email="godony.peter@pataky.hu", office="12.D"),
+    Teacher(id="T14", name="Gudmon Zsolt", subject="Hálózatszerelés, Távközlés elektronika, Optikai hálózatok", department="Informatika", email="gudmon.zsolt@pataky.hu", office="13.A és 13.B"),
+    Teacher(id="T15", name="Hódi Gyula", subject="Programozási alapok, IKT projektmunka I., Digitális kultúra", department="Informatika", email="hodi.gyula@pataky.hu"),
+    Teacher(id="T16", name="Matuszczak Róbert", subject="IKT projektmunka, Digitális kultúra, Szerver szolgáltatások", department="Informatika", email="rob@pataky.hu", office="9.C és 13.C"),
+    Teacher(id="T17", name="Virágh Krisztián", subject="Szerverek és felhőszolgáltatások, IP hálózatok", department="Informatika", email="viragh.krisztian@pataky.hu", office="10.B"),
+    Teacher(id="T18", name="Pesti Zoltán", subject="Hálózatok I és II, Felhőszolgáltatások", department="Informatika", email="pezo@pataky.hu", office="13.D"),
+    Teacher(id="T19", name="Apáti János", subject="Programozási alapok, Informatikai és távközlési alapok", department="Informatika", email="apati.janos@pataky.hu", office="11.C"),
+    Teacher(id="T20", name="Abrók István", subject="távközlés, IKT projektmunka II.", department="Informatika", email="abrok.istvan@pataky.hu"),
+    Teacher(id="T21", name="Kovács Annabella", subject="digitális kultúra", department="Informatika", email="bella@pataky.hu"),
+    Teacher(id="T22", name="Kőhalmi Ábel", subject="IP hálózatok", department="Informatika", email="kohalmi.abel@pataky.hu"),
+    Teacher(id="T23", name="Szabó Viktória Anikó", subject="digitális kultúra, pénzügyi és vállalkozói ismeretek", department="Informatika", email="szabo.viktoria@pataky.hu"),
+    Teacher(id="T24", name="Bruder György", subject="informatika", department="Informatika", email="bruder.gyorgy@pataky.hu"),
+    Teacher(id="T25", name="Visi Gergő Bálint", subject="IKT Projektmunka, Távközlés", department="Informatika", email="visi.gergo@pataky.hu"),
+    Teacher(id="T26", name="Gáll Katalin Márta", subject="Angol nyelv", department="Közismeret", email="gall.katalin@pataky.hu", office="12.B"),
+    Teacher(id="T27", name="Tóth-Káli Dominika", subject="angol nyelv", department="Közismeret", email="kali.dominika@pataky.hu"),
+    Teacher(id="T28", name="Kántor Sándor", subject="Angol nyelv", department="Közismeret", email="kantor.sandor@pataky.hu"),
+    Teacher(id="T29", name="Szerencsi Andrea", subject="Angol nyelv", department="Közismeret", email="szerencsi.andrea@pataky.hu", office="10.C"),
+    Teacher(id="T30", name="Kemény Orsolya", subject="Angol nyelv", department="Közismeret", email="kemenyorsolya@pataky.hu"),
+    Teacher(id="T31", name="Szauterné Pödrőczi Éva", subject="angol nyelv", department="Közismeret", email="szauter.eva@pataky.hu"),
+    Teacher(id="T32", name="Ferencz Noémi", subject="Angol nyelv", department="Közismeret", email="ferencz.noemi@pataky.hu"),
+    Teacher(id="T33", name="Törteli Tibor", subject="testnevelés", department="Közismeret", email="torteli.tibor@pataky.hu", office="10.A"),
+    Teacher(id="T34", name="Gazsó Réka", subject="testnevelés", department="Közismeret", email="gazso.reka@pataky.hu"),
+    Teacher(id="T35", name="Rozmán Balázs", subject="testnevelés", department="Közismeret", email="rozman.balazs@pataky.hu", office="9.A"),
 ]
 
 # Menu data
