@@ -321,7 +321,7 @@ GALLERY_ALBUMS = [
     GalleryAlbum(
         id="1",
         title="Szalagavató",
-        description="Betekintés a 12.-esek szalagavatójába.",
+        description="Szalagavató 2026!",
         date="2026-01-16",
         cover_image="https://scontent-vie1-1.xx.fbcdn.net/v/t39.30808-6/615999093_1484899656973052_3679359874566733709_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=f727a1&_nc_ohc=-_VscXN787kQ7kNvwF6b7tu&_nc_oc=Adn5X37ON70AYpjwrO-Q-Z4VsXXlIWohlUd0wmpEFZV38kNHqSm-X2g9PszIAcALV0vgt3LVQfv0QbsUEcAegfV_&_nc_zt=23&_nc_ht=scontent-vie1-1.xx&_nc_gid=0iy02J978rdqJrz1kYCG1Q&oh=00_AfvEC9a0nRubqZQ78kRLgXBXjHv6OYHTvknoGZsf-C90uQ&oe=69958FD3",
         image_count=4,
