@@ -581,9 +581,31 @@ async def search_teachers(q: str = ""):
     q_lower = q.lower()
     return [t for t in TEACHERS if q_lower in t.name.lower() or q_lower in t.subject.lower() or q_lower in t.department.lower()]
 
-@api_router.get("/menu")
+@api_router.get("/menu", response_model=List[DailyMenu])
 async def get_menu():
+    today_str = datetime.now().strftime("%Y-%m-%d")
+    
+    today_menu = next((item for item in WEEKLY_MENU if item.date == today_str), None)
+    
+    if today_menu:
+        msg = f"Ma: {today_menu.soup.name}, {today_menu.main_course.name}"
+        send_push_to_all("Mai Menü 🍴", msg)
+    
     return WEEKLY_MENU
+
+@api_router.post("/send-menu-push")
+async def send_menu_push():
+    today_str = datetime.now().strftime("%Y-%m-%d")
+    today_menu = next((item for item in WEEKLY_MENU if item.date == today_str), None)
+
+    if today_menu:
+        title = f"Mai menü - {today_menu.day} 🍴"
+        body = f"Leves: {today_menu.soup.name}\nFőétel: {today_menu.main_course.name}"
+    else:
+        title = "Pataky Menza 🍴"
+        body = "Nézd meg a heti menüt az alkalmazásban!"
+
+    return send_push_to_all(title, body)
 
 @api_router.get("/gallery")
 async def get_gallery():
