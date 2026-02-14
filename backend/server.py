@@ -134,7 +134,7 @@ NEWS_ARTICLES = [
         subtitle="Központi írásbeli felvételi információk",
         content="Folyamatosan frissített információk a középiskolai felvételi folyamattal kapcsolatban. Az írásbeli vizsgák időpontjai és helyszínei elérhetőek az iskola honlapján. Kérjük, kövesse figyelemmel az aktuális információkat!",
         image_url=None,
-        date="2025-01-15",
+        date="2026-01-15",
         category="Felvételi"
     ),
     NewsArticle(
@@ -143,7 +143,7 @@ NEWS_ARTICLES = [
         subtitle="Indul a Felnőttképzési jelentkezés",
         content="Ismerd meg, milyen szakmákkal várunk! A felnőttoktatás keretében lehetőség van új szakma megszerzésére, rugalmas időbeosztással. Jelentkezz most és kezdj új karriert!",
         image_url=None,
-        date="2025-01-28",
+        date="2026-01-28",
         category="Felnőttoktatás"
     ),
     NewsArticle(
@@ -152,7 +152,7 @@ NEWS_ARTICLES = [
         subtitle="Mitől vagyunk jobbak és többek?",
         content="Beiskolázás 2026-2027. Modern technológiák, tapasztalt oktatók, ipari partnerkapcsolatok. Válaszd a Pataky Technikumot és építsd jövődet velünk!",
         image_url=None,
-        date="2025-01-06",
+        date="2026-01-06",
         category="Beiskolázás"
     ),
     NewsArticle(
@@ -161,7 +161,7 @@ NEWS_ARTICLES = [
         subtitle="4 napos római városnézés diákoknak",
         content="2026.03.17-20 között szervezett római tanulmányi út. Jelentkezés az osztályfőnököknél. Korlátozott létszám, ne maradj le!",
         image_url=None,
-        date="2025-02-05",
+        date="2026-02-05",
         category="Események"
     ),
     NewsArticle(
@@ -170,7 +170,7 @@ NEWS_ARTICLES = [
         subtitle="Felkészítő anyagok elérhetőek",
         content="Az emelt szintű fizika érettségire készülők számára elérhetővé tettük a kísérleti videókat és leírásokat. A tananyag folyamatosan bővül.",
         image_url=None,
-        date="2025-01-20",
+        date="2026-01-20",
         category="Tanulás"
     )
 ]
@@ -298,35 +298,35 @@ class DailyMenu(BaseModel):
 WEEKLY_MENU = [
     DailyMenu(
         day="Hétfő",
-        date="2025-02-16",
+        date="2026-02-16",
         soup=MenuItem(name="Legényfogóleves", allergens=["glutén", "tojás"]),
         main_course=MenuItem(name="Morzsás nudli porcukorral", allergens=["glutén", "tojás", "tej"]),
         dessert=MenuItem(name="Gyümölcs")
     ),
     DailyMenu(
         day="Kedd",
-        date="2025-02-17",
+        date="2026-02-17",
         soup=MenuItem(name="Csonleves cérnametélttel", allergens=["glutén", "tojás"]),
         main_course=MenuItem(name="Erdélyi rakott káposzta", allergens=[]),
         dessert=MenuItem(name="-")
     ),
     DailyMenu(
         day="Szerda",
-        date="2025-02-18",
+        date="2026-02-18",
         soup=MenuItem(name="Zöldséges karfiolleves", allergens=[]),
         main_course=MenuItem(name="Burgonya főzelék, sertés pörkölt", allergens=["glutén"]),
         dessert=MenuItem(name="-")
     ),
     DailyMenu(
         day="Csütörtök",
-        date="2025-02-19",
+        date="2026-02-19",
         soup=MenuItem(name="Bazsalikomos paradicsomleves"),
         main_course=MenuItem(name="Provence-i csirkecomb, rizi-bizi"),
         dessert=MenuItem(name="-")
     ),
     DailyMenu(
         day="Péntek",
-        date="2025-02-20",
+        date="2026-02-20",
         soup=MenuItem(name="Francia hagymaleves, sajtos cruton", allergens=["glutén", "tej"]),
         main_course=MenuItem(name="Vegán chilis bab"),
         dessert=MenuItem(name="Túró Rudi", allergens=["tej"])
@@ -369,7 +369,7 @@ GALLERY_ALBUMS = [
         id="2",
         title="Projektmunka bemutató",
         description="Diákjaink projektmunkáinak bemutatója",
-        date="2025-01-15",
+        date="2026-01-15",
         cover_image="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800",
         image_count=4,
         images=[
@@ -511,11 +511,11 @@ CAMPUS_BUILDINGS = [
 ]
 
 EVENTS = [
-    Event(id="1", title="Nyílt nap", date="2025-02-15", description="Ismerkedj meg iskolánkkal! Programok, bemutatók, tájékoztató.", location="Pataky Technikum"),
-    Event(id="2", title="Felvételi időszak kezdete", date="2025-02-20", description="A központi írásbeli felvételi vizsga időpontja.", location="Pataky Technikum"),
-    Event(id="3", title="Szülői értekezlet", date="2025-03-05", description="Tájékoztató a 2024/2025-ös tanév második félévéről.", location="Pataky Technikum"),
-    Event(id="4", title="Római tanulmányi út", date="2025-03-17", description="4 napos tanulmányi út Rómába.", location="Róma, Olaszország"),
-    Event(id="5", title="Érettségi szóbeli", date="2025-06-02", description="Szóbeli érettségi vizsgák kezdete.", location="Pataky Technikum"),
+    Event(id="1", title="Nyílt nap", date="2026-02-15", description="Ismerkedj meg iskolánkkal! Programok, bemutatók, tájékoztató.", location="Pataky Technikum"),
+    Event(id="2", title="Felvételi időszak kezdete", date="2026-02-20", description="A központi írásbeli felvételi vizsga időpontja.", location="Pataky Technikum"),
+    Event(id="3", title="Szülői értekezlet", date="2026-03-05", description="Tájékoztató a 2024/2026-ös tanév második félévéről.", location="Pataky Technikum"),
+    Event(id="4", title="Római tanulmányi út", date="2026-03-17", description="4 napos tanulmányi út Rómába.", location="Róma, Olaszország"),
+    Event(id="5", title="Érettségi szóbeli", date="2026-06-02", description="Szóbeli érettségi vizsgák kezdete.", location="Pataky Technikum"),
 ]
 
 QUICK_LINKS = [
