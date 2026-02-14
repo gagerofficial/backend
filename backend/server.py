@@ -17,7 +17,9 @@ registered_tokens: Set[str] = set()
 class TokenSchema(BaseModel):
     token: str
 
-@app.post("/api/register-token")
+api_router = APIRouter(prefix="/api")
+
+@api_router.post("/register-token")
 async def register_token(data: TokenSchema):
     registered_tokens.add(data.token)
     print(f"DEBUG: Új token regisztrálva: {data.token}")
@@ -26,7 +28,6 @@ async def register_token(data: TokenSchema):
 def send_push_to_all(title: str, body: str):
     url = "https://exp.host/--/api/v2/push/send"
     payloads = []
-    
     for token in registered_tokens:
         payloads.append({
             "to": token,
@@ -34,15 +35,28 @@ def send_push_to_all(title: str, body: str):
             "body": body,
             "sound": "default"
         })
-    
     if payloads:
         response = requests.post(url, json=payloads)
         return response.json()
     return {"message": "Nincs regisztrált eszköz."}
 
-@app.post("/api/send-test-push")
+@api_router.post("/send-test-push")
 async def test_push():
-    return send_push_to_all("Szerver Üzenet", "Ez már a saját backendünkből jött! 🐍")
+    return send_push_to_all("PatakyApp Teszt", "Működik az értesítés! 🚀")
+
+@api_router.post("/send-menu-push")
+async def send_menu_push():
+    today_str = datetime.now().strftime("%Y-%m-%d")
+    today_menu = next((item for item in WEEKLY_MENU if item.date == today_str), None)
+
+    if today_menu:
+        title = f"Mai menü - {today_menu.day} 🍴"
+        body = f"Leves: {today_menu.soup.name}\nFőétel: {today_menu.main_course.name}"
+    else:
+        title = "Pataky Menza 🍴"
+        body = "Nézd meg a heti menüt az alkalmazásban!"
+
+    return send_push_to_all(title, body)
 
 app.add_middleware(
     CORSMiddleware,
@@ -53,7 +67,6 @@ app.add_middleware(
 )
 
 # Create a router with the /api prefix
-api_router = APIRouter(prefix="/api")
 
 
 # Define Models
@@ -593,19 +606,7 @@ async def get_menu():
     
     return WEEKLY_MENU
 
-@api_router.post("/send-menu-push")
-async def send_menu_push():
-    today_str = datetime.now().strftime("%Y-%m-%d")
-    today_menu = next((item for item in WEEKLY_MENU if item.date == today_str), None)
 
-    if today_menu:
-        title = f"Mai menü - {today_menu.day} 🍴"
-        body = f"Leves: {today_menu.soup.name}\nFőétel: {today_menu.main_course.name}"
-    else:
-        title = "Pataky Menza 🍴"
-        body = "Nézd meg a heti menüt az alkalmazásban!"
-
-    return send_push_to_all(title, body)
 
 @api_router.get("/gallery")
 async def get_gallery():
