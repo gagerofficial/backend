@@ -1,15 +1,48 @@
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI, APIRouter, Body
 from starlette.middleware.cors import CORSMiddleware
 import os
 import uvicorn
 import logging
 from pydantic import BaseModel, Field
-from typing import List, Optional
+from typing import List, Optional, Set
 import uuid
 from datetime import datetime
+import requests
 
 # Create the main app without a prefix
 app = FastAPI()
+
+registered_tokens: Set[str] = set()
+
+class TokenSchema(BaseModel):
+    token: str
+
+@app.post("/api/register-token")
+async def register_token(data: TokenSchema):
+    registered_tokens.add(data.token)
+    print(f"DEBUG: Új token regisztrálva: {data.token}")
+    return {"status": "ok", "message": "Token mentve"}
+
+def send_push_to_all(title: str, body: str):
+    url = "https://exp.host/--/api/v2/push/send"
+    payloads = []
+    
+    for token in registered_tokens:
+        payloads.append({
+            "to": token,
+            "title": title,
+            "body": body,
+            "sound": "default"
+        })
+    
+    if payloads:
+        response = requests.post(url, json=payloads)
+        return response.json()
+    return {"message": "Nincs regisztrált eszköz."}
+
+@app.post("/api/send-test-push")
+async def test_push():
+    return send_push_to_all("Szerver Üzenet", "Ez már a saját backendünkből jött! 🐍")
 
 app.add_middleware(
     CORSMiddleware,
