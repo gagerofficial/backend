@@ -298,7 +298,7 @@ class DailyMenu(BaseModel):
 WEEKLY_MENU = [
     DailyMenu(
         day="Hétfő",
-        date="2025-02-14",
+        date="2025-02-16",
         soup=MenuItem(name="Legényfogóleves", allergens=["glutén", "tojás"]),
         main_course=MenuItem(name="Morzsás nudli porcukorral", allergens=["glutén", "tojás", "tej"]),
         dessert=MenuItem(name="Gyümölcs")
