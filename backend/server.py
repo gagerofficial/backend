@@ -246,41 +246,41 @@ class Teacher(BaseModel):
     consultation_hours: Optional[str] = None
 
 TEACHERS = [
-    Teacher(id="T1", name="Czene István", subject="magyar nyelv és irodalom – történelem – állampolgári ismeretek", department="Közismeret", email="istvanczene@gmail.com", office="11.B"),
-    Teacher(id="T2", name="Harsányi Tünde", subject="magyar nyelv és irodalom – történelem – állampolgári ismeretek", department="Közismeret", email="harsanyit@pataky.hu", office="11.D"),
-    Teacher(id="T3", name="Haller Zoltán", subject="magyar nyelv és irodalom – történelem", department="Közismeret", email="haller.zoltan@pataky.hu", office="11.E"),
-    Teacher(id="T4", name="Szalai József", subject="magyar nyelv és irodalom", department="Közismeret", email="szalai.jozsef@pataky.hu", office="9.B"),
-    Teacher(id="T5", name="Tózsa Éva", subject="magyar nyelv és irodalom", department="Közismeret", email="tozsa.eva77@gmail.com", office="11.A"),
+    Teacher(id="T1", name="Czene István", subject="magyar nyelv és irodalom – történelem – állampolgári ismeretek", department="Közismeret", email="istvanczene@gmail.com", grade="11.B"),
+    Teacher(id="T2", name="Harsányi Tünde", subject="magyar nyelv és irodalom – történelem – állampolgári ismeretek", department="Közismeret", email="harsanyit@pataky.hu", grade="11.D"),
+    Teacher(id="T3", name="Haller Zoltán", subject="magyar nyelv és irodalom – történelem", department="Közismeret", email="haller.zoltan@pataky.hu", grade="11.E"),
+    Teacher(id="T4", name="Szalai József", subject="magyar nyelv és irodalom", department="Közismeret", email="szalai.jozsef@pataky.hu", grade="9.B"),
+    Teacher(id="T5", name="Tózsa Éva", subject="magyar nyelv és irodalom", department="Közismeret", email="tozsa.eva77@gmail.com", grade="11.A"),
     Teacher(id="T6", name="Csabay Károly", subject="Matematika", department="Közismeret", email="csabay.karoly@pataky.hu"),
-    Teacher(id="T7", name="Hegedűs László", subject="matematika", department="Közismeret", email="hegedus.laszlo@pataky.hu", office="12.C"),
-    Teacher(id="T8", name="Katona Csaba", subject="Fizika", department="Közismeret", email="kacsa@pataky.hu", office="12.C"),
+    Teacher(id="T7", name="Hegedűs László", subject="matematika", department="Közismeret", email="hegedus.laszlo@pataky.hu", grade="12.C"),
+    Teacher(id="T8", name="Katona Csaba", subject="Fizika", department="Közismeret", email="kacsa@pataky.hu", grade="12.C"),
     Teacher(id="T9", name="Novotny László", subject="matematika", department="Közismeret", email="novotny.laszlo@pataky.hu"),
     Teacher(id="T10", name="Szabó Márta", subject="matematika, digitális kultúra", department="Közismeret", email="szabo.marta@pataky.hu"),
     Teacher(id="T11", name="Fekete Tamás", subject="IKT projektmunka, Programozás, Informatikai alapok", department="Informatika", email="fekete.tamas@pataky.hu"),
     Teacher(id="T12", name="Gersei Gábor", subject="Hálózatok gyakorlat, Informatikai alapok", department="Informatika", email="gersei@pataky.hu"),
-    Teacher(id="T13", name="Gödöny Péter", subject="Informatikai alapok, Programozás, Digitális kultúra", department="Informatika", email="godony.peter@pataky.hu", office="12.D"),
-    Teacher(id="T14", name="Gudmon Zsolt", subject="Hálózatszerelés, Távközlés elektronika, Optikai hálózatok", department="Informatika", email="gudmon.zsolt@pataky.hu", office="13.A és 13.B"),
+    Teacher(id="T13", name="Gödöny Péter", subject="Informatikai alapok, Programozás, Digitális kultúra", department="Informatika", email="godony.peter@pataky.hu", grade="12.D"),
+    Teacher(id="T14", name="Gudmon Zsolt", subject="Hálózatszerelés, Távközlés elektronika, Optikai hálózatok", department="Informatika", email="gudmon.zsolt@pataky.hu", grade="13.A és 13.B"),
     Teacher(id="T15", name="Hódi Gyula", subject="Programozási alapok, IKT projektmunka I., Digitális kultúra", department="Informatika", email="hodi.gyula@pataky.hu"),
-    Teacher(id="T16", name="Matuszczak Róbert", subject="IKT projektmunka, Digitális kultúra, Szerver szolgáltatások", department="Informatika", email="rob@pataky.hu", office="9.C és 13.C"),
-    Teacher(id="T17", name="Virágh Krisztián", subject="Szerverek és felhőszolgáltatások, IP hálózatok", department="Informatika", email="viragh.krisztian@pataky.hu", office="10.B"),
-    Teacher(id="T18", name="Pesti Zoltán", subject="Hálózatok I és II, Felhőszolgáltatások", department="Informatika", email="pezo@pataky.hu", office="13.D"),
-    Teacher(id="T19", name="Apáti János", subject="Programozási alapok, Informatikai és távközlési alapok", department="Informatika", email="apati.janos@pataky.hu", office="11.C"),
+    Teacher(id="T16", name="Matuszczak Róbert", subject="IKT projektmunka, Digitális kultúra, Szerver szolgáltatások", department="Informatika", email="rob@pataky.hu", grade="9.C és 13.C"),
+    Teacher(id="T17", name="Virágh Krisztián", subject="Szerverek és felhőszolgáltatások, IP hálózatok", department="Informatika", email="viragh.krisztian@pataky.hu", grade="10.B"),
+    Teacher(id="T18", name="Pesti Zoltán", subject="Hálózatok I és II, Felhőszolgáltatások", department="Informatika", email="pezo@pataky.hu", grade="13.D"),
+    Teacher(id="T19", name="Apáti János", subject="Programozási alapok, Informatikai és távközlési alapok", department="Informatika", email="apati.janos@pataky.hu", grade="11.C"),
     Teacher(id="T20", name="Abrók István", subject="távközlés, IKT projektmunka II.", department="Informatika", email="abrok.istvan@pataky.hu"),
     Teacher(id="T21", name="Kovács Annabella", subject="digitális kultúra", department="Informatika", email="bella@pataky.hu"),
     Teacher(id="T22", name="Kőhalmi Ábel", subject="IP hálózatok", department="Informatika", email="kohalmi.abel@pataky.hu"),
     Teacher(id="T23", name="Szabó Viktória Anikó", subject="digitális kultúra, pénzügyi és vállalkozói ismeretek", department="Informatika", email="szabo.viktoria@pataky.hu"),
     Teacher(id="T24", name="Bruder György", subject="informatika", department="Informatika", email="bruder.gyorgy@pataky.hu"),
     Teacher(id="T25", name="Visi Gergő Bálint", subject="IKT Projektmunka, Távközlés", department="Informatika", email="visi.gergo@pataky.hu"),
-    Teacher(id="T26", name="Gáll Katalin Márta", subject="Angol nyelv", department="Közismeret", email="gall.katalin@pataky.hu", office="12.B"),
+    Teacher(id="T26", name="Gáll Katalin Márta", subject="Angol nyelv", department="Közismeret", email="gall.katalin@pataky.hu", grade="12.B"),
     Teacher(id="T27", name="Tóth-Káli Dominika", subject="angol nyelv", department="Közismeret", email="kali.dominika@pataky.hu"),
     Teacher(id="T28", name="Kántor Sándor", subject="Angol nyelv", department="Közismeret", email="kantor.sandor@pataky.hu"),
-    Teacher(id="T29", name="Szerencsi Andrea", subject="Angol nyelv", department="Közismeret", email="szerencsi.andrea@pataky.hu", office="10.C"),
+    Teacher(id="T29", name="Szerencsi Andrea", subject="Angol nyelv", department="Közismeret", email="szerencsi.andrea@pataky.hu", grade="10.C"),
     Teacher(id="T30", name="Kemény Orsolya", subject="Angol nyelv", department="Közismeret", email="kemenyorsolya@pataky.hu"),
     Teacher(id="T31", name="Szauterné Pödrőczi Éva", subject="angol nyelv", department="Közismeret", email="szauter.eva@pataky.hu"),
     Teacher(id="T32", name="Ferencz Noémi", subject="Angol nyelv", department="Közismeret", email="ferencz.noemi@pataky.hu"),
-    Teacher(id="T33", name="Törteli Tibor", subject="testnevelés", department="Közismeret", email="torteli.tibor@pataky.hu", office="10.A"),
+    Teacher(id="T33", name="Törteli Tibor", subject="testnevelés", department="Közismeret", email="torteli.tibor@pataky.hu", grade="10.A"),
     Teacher(id="T34", name="Gazsó Réka", subject="testnevelés", department="Közismeret", email="gazso.reka@pataky.hu"),
-    Teacher(id="T35", name="Rozmán Balázs", subject="testnevelés", department="Közismeret", email="rozman.balazs@pataky.hu", office="9.A"),
+    Teacher(id="T35", name="Rozmán Balázs", subject="testnevelés", department="Közismeret", email="rozman.balazs@pataky.hu", grade="9.A"),
 ]
 
 # Menu data
@@ -414,7 +414,7 @@ class Room(BaseModel):
     name: str
     floor: int
     building: str
-    type: str  # classroom, lab, office, facility
+    type: str  # classroom, lab, grade, facility
     description: Optional[str] = None
 
 class Building(BaseModel):
@@ -434,9 +434,9 @@ CAMPUS_BUILDINGS = [
         description="Adminisztráció, vezetőség, közismereti tantermek",
         rooms=[
             Room(id="A-001", name="Porta", floor=0, building="A", type="facility", description="Beléptetés, információ"),
-            Room(id="A-002", name="Titkárság", floor=0, building="A", type="office", description="Ügyintézés"),
-            Room(id="A-101", name="Igazgatói iroda", floor=1, building="A", type="office"),
-            Room(id="A-102", name="Tanári szoba", floor=1, building="A", type="office"),
+            Room(id="A-002", name="Titkárság", floor=0, building="A", type="grade", description="Ügyintézés"),
+            Room(id="A-101", name="Igazgatói iroda", floor=1, building="A", type="grade"),
+            Room(id="A-102", name="Tanári szoba", floor=1, building="A", type="grade"),
             Room(id="A-103", name="Fizika labor", floor=1, building="A", type="lab", description="Fizikai kísérletek"),
             Room(id="A-104", name="Kémia labor", floor=1, building="A", type="lab", description="Kémiai kísérletek"),
             Room(id="A-105", name="Elektronika műhely", floor=1, building="A", type="lab", description="Elektronikai gyakorlat"),
@@ -476,9 +476,9 @@ CAMPUS_BUILDINGS = [
             Room(id="C-104", name="Kémia terem", floor=1, building="C", type="classroom"),
             Room(id="C-201", name="Magyar terem", floor=2, building="C", type="classroom"),
             Room(id="C-202", name="Történelem terem", floor=2, building="C", type="classroom"),
-            Room(id="C-301", name="Irodalom tanári", floor=3, building="C", type="office"),
+            Room(id="C-301", name="Irodalom tanári", floor=3, building="C", type="grade"),
             Room(id="C-302", name="Matematika terem", floor=3, building="C", type="classroom"),
-            Room(id="C-303", name="Történelem tanári", floor=3, building="C", type="office"),
+            Room(id="C-303", name="Történelem tanári", floor=3, building="C", type="grade"),
             Room(id="C-305", name="Angol terem", floor=3, building="C", type="classroom"),
         ]
     ),
