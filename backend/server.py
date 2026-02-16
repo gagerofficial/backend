@@ -242,7 +242,7 @@ class Teacher(BaseModel):
     department: str
     email: Optional[str] = None
     phone: Optional[str] = None
-    office: Optional[str] = None
+    grade: Optional[str] = None
     consultation_hours: Optional[str] = None
 
 TEACHERS = [
