@@ -298,38 +298,38 @@ class DailyMenu(BaseModel):
 WEEKLY_MENU = [
     DailyMenu(
         day="Hétfő",
-        date="2026-02-16",
-        soup=MenuItem(name="Legényfogóleves", allergens=["glutén", "tojás"]),
-        main_course=MenuItem(name="Morzsás nudli porcukorral", allergens=["glutén", "tojás", "tej"]),
+        date="2026-02-23",
+        soup=MenuItem(name="Frankfurti leves", allergens=["glutén"]),
+        main_course=MenuItem(name="Mákos tészta", allergens=["glutén", "tojás"]),
         dessert=MenuItem(name="Gyümölcs")
     ),
     DailyMenu(
         day="Kedd",
-        date="2026-02-17",
-        soup=MenuItem(name="Csonleves cérnametélttel", allergens=["glutén", "tojás"]),
-        main_course=MenuItem(name="Erdélyi rakott káposzta", allergens=[]),
+        date="2026-02-24",
+        soup=MenuItem(name="Csurgatott tojásleves", allergens=[ "tojás"]),
+        main_course=MenuItem(name="Vasi sertésborda, Vajas törtburgonya", allergens=["glutén", "tojás", "tej"]),
         dessert=MenuItem(name="-")
     ),
     DailyMenu(
         day="Szerda",
-        date="2026-02-18",
-        soup=MenuItem(name="Zöldséges karfiolleves", allergens=[]),
-        main_course=MenuItem(name="Burgonya főzelék, sertés pörkölt", allergens=["glutén"]),
+        date="2026-02-25",
+        soup=MenuItem(name="Zöldséges brokkolileves", allergens=[]),
+        main_course=MenuItem(name="Harcsafilé sajtmártással, Bulgur", allergens=["glutén", "hal", "tej"]),
         dessert=MenuItem(name="-")
     ),
     DailyMenu(
         day="Csütörtök",
-        date="2026-02-19",
-        soup=MenuItem(name="Bazsalikomos paradicsomleves"),
-        main_course=MenuItem(name="Provence-i csirkecomb, rizi-bizi"),
+        date="2026-02-26",
+        soup=MenuItem(name="Lebbencsleves"),
+        main_course=MenuItem(name="Zöldbabfőzelék, Pulykapörkölt", allergens=["glutén", "tej"]), 
         dessert=MenuItem(name="-")
     ),
     DailyMenu(
         day="Péntek",
-        date="2026-02-20",
-        soup=MenuItem(name="Francia hagymaleves, sajtos cruton", allergens=["glutén", "tej"]),
-        main_course=MenuItem(name="Vegán chilis bab"),
-        dessert=MenuItem(name="Túró Rudi", allergens=["tej"])
+        date="2026-02-27",
+        soup=MenuItem(name="100%-os gyümölcslé", allergens=["glutén", "tej"]),
+        main_course=MenuItem(name="Rántott sajt, Petrezselymes rizs, Tartár mártás", allergens=("glutén", "tej", "tojás"),
+        dessert=MenuItem(name="-", allergens=[""])
     ),
 ]
 
