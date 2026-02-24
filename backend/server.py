@@ -328,8 +328,8 @@ WEEKLY_MENU = [
         day="Péntek",
         date="2026-02-27",
         soup=MenuItem(name="100%-os gyümölcslé", allergens=["glutén", "tej"]),
-        main_course=MenuItem(name="Rántott sajt, Petrezselymes rizs, Tartár mártás", allergens=("glutén", "tej", "tojás"),
-        dessert=MenuItem(name="-", allergens=[""])
+        main_course=MenuItem(name="Rántott sajt, Petrezselymes rizs, Tartár mártás", allergens=["glutén", "tej", "tojás"]),
+        dessert=MenuItem(name="-")
     ),
 ]
 
